@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skc_goal_planner/route_helper.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,33 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Goal Planner',
       theme: ThemeData(
+        fontFamily: 'Arsenal',
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
-    );
-  }
-}
-
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Container(
-          child: Center(
-            child: Text("Goal Planner"),
-          ),
-        ),
-      ),
+      initialRoute: RouteHelper.splashScreen,
+      onGenerateRoute: RouteHelper().generateRoute,
     );
   }
 }

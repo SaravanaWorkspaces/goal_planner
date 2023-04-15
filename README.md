@@ -16,3 +16,5 @@ Project to track personalized goals
 - Add Hive as DB
 - Get it as DI
 
+
+//--Break each element to undetstand better, once completed the base project
